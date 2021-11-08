@@ -13,6 +13,9 @@ const server = express();
 //Init helmet
 server.use(helmet());
 
+// Init PORT
+const PORT = process.env.PORT || 8080
+
 // Headers for CORS
 server.use((req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
@@ -54,8 +57,8 @@ server.use("/mediaStatic", express.static(path.join(__dirname, "mediaStatic")));
 server.use("/api/", apiRouter);
 
 // Launch server
-server.listen(8080, async () => {
-  console.log(" ---- Server listening ---- ");
+server.listen(PORT, async () => {
+  console.log(` ---- Server listening on ${ PORT } ---- `);
   if (!(await utils.isDataBase())) {
     try {
       console.log(

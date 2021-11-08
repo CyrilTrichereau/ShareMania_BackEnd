@@ -1,15 +1,18 @@
 {
-  "name": "backEnd_Sharemania",
-  "version": "1.0.0",
-  "description": "CyrilTrichereau_7_09022021 : Training OpenClassrooms: Web Developper. Project 7 : Create a corporate social network",
+  "name": "ShareMania_BackEnd",
+  "version": "2.1.0",
+  "description": "API designed for ShareMAnia, a corporate social network. This API is RestFul, in NodeJS, with a data base in MySQL, powered by sequelize. Connection are permitted with users connections, tokens, moderator and many more stuffs !",
   "main": "server.js",
+  "engines": {
+    "node": "14.17.3"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Cyril Trichereau",
   "license": "ISC",
   "dependencies": {
-    "@sendgrid/mail": "^7.4.6",
+    "@sendgrid/mail": "^7.6.0",
     "bcrypt": "^5.0.1",
     "body-parser": "^1.19.0",
     "crypto-js": "^4.1.1",
@@ -19,12 +22,12 @@
     "jsonwebtoken": "^8.5.1",
     "multer": "^1.4.3",
     "mysql": "^2.18.1",
-    "mysql2": "^2.3.0",
-    "nodemailer": "^6.6.3",
-    "nodemon": "^2.0.12",
-    "sequelize": "^6.6.5"
+    "mysql2": "^2.3.2",
+    "nodemailer": "^6.7.0",
+    "nodemon": "^2.0.14",
+    "sequelize": "^6.9.0"
   },
   "devDependencies": {
-    "sequelize-cli": "^6.2.0"
+    "sequelize-cli": "^6.3.0"
   }
 }
