@@ -14,7 +14,7 @@ const server = express();
 server.use(helmet());
 
 // Init PORT
-const PORT = process.env.PORT || 8080
+const PORT = process.env.PORT || 8080;
 
 // Headers for CORS
 server.use((req, res, next) => {
@@ -58,8 +58,9 @@ server.use("/api/", apiRouter);
 
 // Launch server
 server.listen(PORT, async () => {
-  console.log(` ---- Server listening on ${ PORT } ---- `);
-  if (!(await utils.isDataBase())) {
+  console.log(` ---- Server listening on ${PORT} ---- `);
+  // If data base is empty and if node environnement is not in production, then generate a fake data base
+  if (!(await utils.isDataBase()) && process.env.NODE_ENV != "production") {
     try {
       console.log(
         " ---- No Data base detected - Preparing injection of fake database ---- "
