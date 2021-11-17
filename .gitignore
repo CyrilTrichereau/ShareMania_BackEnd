@@ -5,3 +5,4 @@ todo.md
 mediaPostsStore/*
 /config/config.json
 requests.sql
+dataBasesToInject

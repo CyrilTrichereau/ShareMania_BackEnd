@@ -60,21 +60,25 @@ server.use("/api/", apiRouter);
 server.listen(PORT, async () => {
   console.log(` ---- Server listening on ${PORT} ---- `);
   // If data base is empty and if node environnement is not in production, then generate a fake data base
-  if (!(await utils.isDataBase()) && process.env.NODE_ENV != "production") {
-    try {
-      console.log(
-        " ---- No Data base detected - Preparing injection of fake database ---- "
-      );
-      utils.injectFakeUsers();
-      setTimeout(() => {
-        utils.injectFakeFeedPostsAndComments();
-      }, 3000);
-      setTimeout(() => {
-        utils.injectOnFireAndColdForPostComments();
-        utils.injectOnFireAndColdForFeedPosts();
-      }, 12000);
-    } catch (err) {
-      console.log("Cannot inject fake database");
+  if (process.env.NODE_ENV != "production") {
+    if (!(await utils.isDataBase())) {
+      try {
+        console.log(
+          " ---- No Data base detected - Preparing injection of fake database ---- "
+        );
+        utils.injectFakeUsers();
+        setTimeout(() => {
+          utils.injectFakeFeedPostsAndComments();
+        }, 10000);
+        setTimeout(() => {
+          utils.injectOnFireAndColdForPostComments();
+        }, 30000);
+        setTimeout(() => {
+          utils.injectOnFireAndColdForFeedPosts();
+        }, 60000);
+      } catch (err) {
+        console.log("Cannot inject fake database");
+      }
     }
   }
 });
