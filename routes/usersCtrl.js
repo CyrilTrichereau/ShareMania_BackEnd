@@ -7,12 +7,12 @@ const nodemailer = require("nodemailer");
 const sgMail = require("@sendgrid/mail");
 const utils = require("../utils/utils");
 const models = require("../models");
-const resetYourPassword = require("../utils/ResetYourPassword.email.js");
-const confirmNewPassword = require("../utils/ConfirmNewPassword.email.js");
-const confirmInscription = require("../utils/ConfirmInscription.email.js");
-const confirmEraseProfile = require("../utils/ConfirmEraseProfile.email.js");
-const confirmChanges = require("../utils/ConfirmChanges.email.js");
-const notRegistered = require("../utils/notRegistered.email");
+const resetYourPassword = require("../utils/templatesEmail/resetYourPassword.email.js");
+const confirmNewPassword = require("../utils/templatesEmail/confirmNewPassword.email.js");
+const confirmInscription = require("../utils/templatesEmail/confirmInscription.email.js");
+const confirmEraseProfile = require("../utils/templatesEmail/confirmEraseProfile.email.js");
+const confirmChanges = require("../utils/templatesEmail/confirmChanges.email.js");
+const notRegistered = require("../utils/templatesEmail/notRegistered.email.js");
 
 // Constants - REGEX
 const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
