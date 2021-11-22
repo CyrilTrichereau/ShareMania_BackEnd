@@ -66,7 +66,7 @@ server.listen(PORT, async () => {
     fs.mkdirSync(dir);
   }
   // If data base is empty and if node environnement is not in production, then generate a fake data base
-  if (process.env.NODE_ENV != "production") {
+  if (process.env.INJECT_FAKE_DATA_BASE) {
     if (!(await utils.isDataBase())) {
       try {
         console.log(
