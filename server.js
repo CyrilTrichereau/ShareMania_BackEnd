@@ -59,6 +59,12 @@ server.use("/api/", apiRouter);
 // Launch server
 server.listen(PORT, async () => {
   console.log(` ---- Server listening on ${PORT} ---- `);
+  // If mediaPostsStore folder doesn't exist, create it
+  var fs = require("fs");
+  var dir = "./mediaPostsStore";
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir);
+  }
   // If data base is empty and if node environnement is not in production, then generate a fake data base
   if (process.env.NODE_ENV != "production") {
     if (!(await utils.isDataBase())) {
