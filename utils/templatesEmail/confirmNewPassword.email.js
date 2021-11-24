@@ -32,7 +32,7 @@ module.exports = {
           <div class="resetPassword">
               <div class="resetPasswordHeader">
                 <img
-                  src="@/../public/images/groupomaniaLogoWhite100pxTinyfied.png"
+                  src="https://sharemania.fr/images/groupomaniaLogoWhite100pxTinyfied.png"
                   alt="ShareMania Logo"
                   class="resetPasswordHeaderLogo"
                 />

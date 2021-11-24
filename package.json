@@ -1,7 +1,12 @@
 {
-  "name": "ShareMania_BackEnd",
+  "name": "sharemania_back_end",
   "version": "2.1.0",
-  "description": "API designed for ShareMAnia, a corporate social network. This API is RestFul, in NodeJS, with a data base in MySQL, powered by sequelize. Connection are permitted with users connections, tokens, moderator and many more stuffs !",
+  "private": true,
+  "description": "Welcome to Sharemania, the social network ! --- API designed for ShareMAnia, a corporate social network. This API is RestFul, in NodeJS, with a data base in MySQL, powered by sequelize. Connection are permitted with users connections, tokens, moderator and many more stuffs !",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CyrilTrichereau/ShareMania_BackEnd.git"
+  },
   "main": "server.js",
   "engines": {
     "node": "16.13.0"
@@ -9,7 +14,18 @@
   "scripts": {
     "start": "node server.js"
   },
-  "author": "Cyril Trichereau",
+  "homepage": "https://sharemania.fr",
+  "bugs": {
+    "url": "https://github.com/CyrilTrichereau/ShareMania_FrontEnd/issues",
+    "email": "contact@sharemania.fr"
+  },
+  "author": {
+    "name": "Cyril Trichereau",
+    "email": "contact@ctch.dev",
+    "portfolio": "https://ctch.dev/",
+    "github": "https://github.com/CyrilTrichereau/",
+    "linkedin": "https://www.linkedin.com/in/cyril-trichereau-4b36a1b5/"
+  },
   "license": "ISC",
   "dependencies": {
     "@sendgrid/mail": "^7.6.0",
@@ -24,7 +40,6 @@
     "multer": "^1.4.3",
     "mysql": "^2.18.1",
     "mysql2": "^2.3.2",
-    "nodemailer": "^6.7.0",
     "sequelize": "^6.9.0"
   },
   "devDependencies": {

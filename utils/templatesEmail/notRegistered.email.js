@@ -1,12 +1,12 @@
 // Exported constant
 module.exports = {
-    email: ({ emailToSend: email }) => {
-      return {
-        to: email,
-        from: "ne.pas.repondre.ShareMania@gmail.com",
-        subject: "Inscrivez vous dès maintenant ! - ShareMania",
-        text: "ShareMania - Vous recevez ce mail suite à une tentative de connexion avec cette adresse mail. Malheureusement, vous n'avez pas encore de compte chez nous... Inscrivez vous dès maintenant !",
-        html: /* html */ `
+  email: ({ emailToSend: email }) => {
+    return {
+      to: email,
+      from: "ne.pas.repondre.ShareMania@gmail.com",
+      subject: "Inscrivez vous dès maintenant ! - ShareMania",
+      text: "ShareMania - Vous recevez ce mail suite à une tentative de connexion avec cette adresse mail. Malheureusement, vous n'avez pas encore de compte chez nous... Inscrivez vous dès maintenant !",
+      html: /* html */ `
         <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -34,7 +34,7 @@ module.exports = {
         <h1 class="resetPasswordHeaderWelcome">Bienvenue sur</h1>
         <div class="resetPasswordHeaderShareMania">
           <img
-            src="@/../public/images/groupomaniaLogoWhite100pxTinyfied.png"
+            src="https://sharemania.fr/images/groupomaniaLogoWhite100pxTinyfied.png"
             alt="ShareMania Logo"
             class="resetPasswordHeaderShareManiaLogo"
           />
@@ -88,7 +88,6 @@ module.exports = {
 </html>
 
         `,
-      };
-    },
-  };
-  
+    };
+  },
+};

@@ -3,7 +3,6 @@ const bcrypt = require("bcrypt");
 const fs = require("fs");
 const jwtUtils = require("../utils/jwt.utils");
 const CryptoJS = require("crypto-js");
-const nodemailer = require("nodemailer");
 const sgMail = require("@sendgrid/mail");
 const utils = require("../utils/utils");
 const models = require("../models");
@@ -511,7 +510,7 @@ module.exports = {
     }
 
     // decrypt email
-    let emailFoundDecrypted = null
+    let emailFoundDecrypted = null;
     try {
       const emailFoundDecryptedRaw = CryptoJS.AES.decrypt(
         userFound.email,
