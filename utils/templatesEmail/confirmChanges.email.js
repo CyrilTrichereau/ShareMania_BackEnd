@@ -3,7 +3,7 @@ module.exports = {
   email: ({ emailToSend: email }) => {
     return {
       to: email,
-      from: "ne.pas.repondre.ShareMania@gmail.com",
+      from: process.env.SENDGRID_USER_EMAIL,
       subject: "Confirmation de changements - ShareMania",
       text: "ShareMania - Vous recevez ce mail afin de vous confirmer les changements opérés sur votre profil. Si vous n'êtes pas à l'origine de ce message, contactez votre manager.",
       html: /* html */ `<!DOCTYPE html>

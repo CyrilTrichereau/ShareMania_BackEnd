@@ -3,7 +3,7 @@ module.exports = {
   email: ({ emailToSend: email }) => {
     return {
       to: email,
-      from: "ne.pas.repondre.ShareMania@gmail.com",
+      from: process.env.SENDGRID_USER_EMAIL,
       subject: "Suppression de votre profil - ShareMania",
       text: "ShareMania - Vous recevez ce mail afin de vous confirmer la suppression votre profil. Si vous n'êtes pas à l'origine de ce message, contactez votre manager.",
       html: /* html */ `<!DOCTYPE html>
