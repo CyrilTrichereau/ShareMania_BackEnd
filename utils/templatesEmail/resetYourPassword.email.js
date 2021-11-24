@@ -3,7 +3,7 @@ module.exports = {
   email: ({ emailToSend: email, token: token }) => {
     return {
       to: email,
-      from: process.env.SENDGRID_USER_EMAIL,
+      from: "contact@sharemania.fr",
       subject: "Réinitialisation de mot de passe - ShareMania",
       text: "ShareMania - Vous recevez ce mail afin de vous permettre de réinitialiser le mot de passe de votre profil. Si vous n'êtes pas à l'origine de ce message, contactez votre manager.",
       html: /* html */ `<!DOCTYPE html>

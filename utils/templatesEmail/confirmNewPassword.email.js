@@ -3,7 +3,7 @@ module.exports = {
   email: ({ emailToSend: email }) => {
     return {
       to: email,
-      from: process.env.SENDGRID_USER_EMAIL,
+      from: "contact@sharemania.fr",
       subject: "Confirmation de changement de mot de passe - ShareMania",
       text: "ShareMania - Vous recevez ce mail afin de vous confirmer le chnagement de votre mot de passe. Si vous n'êtes pas à l'origine de ce message, contactez votre manager.",
       html: /* html */ `<!DOCTYPE html>

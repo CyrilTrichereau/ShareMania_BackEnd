@@ -3,7 +3,7 @@ module.exports = {
   email: ({ emailToSend: email }) => {
     return {
       to: email,
-      from: process.env.SENDGRID_USER_EMAIL,
+      from: "contact@sharemania.fr",
       subject: "Bienvenue chez ShareMania !",
       text: "ShareMania - Votre inscription est enregistrée ! Bienvenue chez ShareMania ! Si vous n'êtes pas à l'origine de ce message, contactez votre manager.",
       html: /* html */ `<!DOCTYPE html>
