@@ -43,7 +43,7 @@ server.use(
 // Test Route ( main entrance )
 server.get("/", (req, res) => {
   res.setHeader("Content-Type", "text/html");
-  res.status(200).send("<h1>Welcome to Sharemania API</h1>");
+  res.status(200).send("<h1>Welcome to ShareMania API</h1>");
 });
 
 // Folder multer
@@ -66,7 +66,7 @@ server.listen(PORT, async () => {
     fs.mkdirSync(dir);
   }
   // If data base is empty and if node environnement is not in production, then generate a fake data base
-  if (process.env.INJECT_FAKE_DATA_BASE) {
+  if (process.env.INJECT_FAKE_DATA_BASE === "true") {
     if (!(await utils.isDataBase())) {
       try {
         console.log(

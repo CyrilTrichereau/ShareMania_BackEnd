@@ -38,9 +38,12 @@
     "jsonwebtoken": "^8.5.1",
     "mariadb": "^2.5.5",
     "multer": "^1.4.3",
+    "multer-sftp": "^1.1.1",
     "mysql": "^2.18.1",
     "mysql2": "^2.3.2",
-    "sequelize": "^6.9.0"
+    "queue": "^6.0.2",
+    "sequelize": "^6.9.0",
+    "ssh2-sftp-client": "^7.1.0"
   },
   "devDependencies": {
     "sequelize-cli": "^6.3.0"

@@ -1,7 +1,6 @@
 # 🚀 Welcome to Sharemania API REST !
 
-**This API REST is part of the web developer training from OpenClassrooms**
-**Project 7 :**
+**API designed for ShareMania, a corporate social network. This API is RestFul, in NodeJS, with a data base in MySQL for dev environment and MariaDB in production environment, powered by sequelize. Connection are permitted with users connections, tokens, moderator and many more stuffs ! Enjoy !!**
 
 **_------------------_**
 **_------------------_**
@@ -25,27 +24,38 @@ npm install
 ```env
 NODE_ENV= (development/production)
 INJECT_FAKE_DATA_BASE= (true/false)
+
 CRYPTO_JS_KEY=
 JWT_KEY=
 JWT_KEY_FORGOTTEN_PASSWORD=
+
 SENDGRID_USER_EMAIL=
 SENDGRID_USER_PASSWORD=
 SENDGRID_API_KEY=
+
 DEV_DATA_BASE_NAME=
 DEV_DATA_BASE_USER=
 DEV_DATA_BASE_PASSWORD=
 DEV_DATA_BASE_HOST=
 DEV_DATA_BASE_DIALECT=
+
 TEST_DATA_BASE_NAME=
 TEST_DATA_BASE_USER=
 TEST_DATA_BASE_PASSWORD=
 TEST_DATA_BASE_HOST=
 TEST_DATA_BASE_DIALECT=
+
 PROD_DATA_BASE_NAME=
 PROD_DATA_BASE_USER=
 PROD_DATA_BASE_PASSWORD=
 PROD_DATA_BASE_HOST=
 PROD_DATA_BASE_DIALECT=
+
+FTP_SHAREMANIA_HOST=
+FTP_SHAREMANIA_PORT=
+FTP_SHAREMANIA_USER=
+FTP_SHAREMANIA_PASSWORD=
+FTP_SHAREMANIA_PATH_DESTINATION=
 ```
 
 **4th:** Verify that mySQL or mariaDB is installed on your computer and create a database with informations from .env file

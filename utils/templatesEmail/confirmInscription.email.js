@@ -3,9 +3,9 @@ module.exports = {
   email: ({ emailToSend: email }) => {
     return {
       to: email,
-      from: "contact@sharemania.fr",
-      subject: "Bienvenue chez ShareMania !",
-      text: "ShareMania - Votre inscription est enregistrée ! Bienvenue chez ShareMania ! Si vous n'êtes pas à l'origine de ce message, contactez votre manager.",
+      from: process.env.SENDGRID_USER_EMAIL,
+      subject: "Bienvenue chez ShareMania.fr !",
+      text: "ShareMania.fr - Votre inscription est enregistrée ! Bienvenue chez ShareMania.fr ! Si vous n'êtes pas à l'origine de ce message, contactez votre manager.",
       html: /* html */ `<!DOCTYPE html>
       <html lang="fr">
         <head>
@@ -14,15 +14,15 @@ module.exports = {
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       
           <style>
-            @import"https://fonts.googleapis.com/css?family=Source+Sans+Pro";body{width:100%;height:100%}body,h1,h2,h3,h4,h5,h6,p,a{font-family:"Source Sans Pro","Trebuchet MS",sans-serif,"Times New Roman";color:#3c464e}body{width:100%;height:100%;margin:0 auto}.resetPassword{width:92%;max-width:800px;padding:0;overflow:hidden;margin:16px auto;background-color:#fdfeff;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;border:#3c464e 1px solid}.resetPasswordHeader{width:100%;padding:32px 0;margin:0 auto;background-color:#4d7c8a}.resetPasswordHeaderWelcome{width:100%;margin:0 auto 0 5px;padding:0;font-size:36px;font-weight:600;color:#fdfeff;text-align:center}.resetPasswordHeaderShareMania{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;width:100%}.resetPasswordHeaderShareManiaLogo{width:22px;padding:0;margin:0 5px 0 auto}.resetPasswordHeaderShareManiaText{margin:0 auto 0 5px;padding:0;font-size:48px;font-weight:600;color:#fdfeff}.resetPasswordHeaderSubTitle{width:80%;margin:16px auto;padding:0;font-size:20px;color:#fdfeff;font-weight:400;text-align:center}.resetPasswordMain{margin:0 auto;width:100%;padding:32px 0 0 0}.resetPasswordMainTitle{color:#4d7c8a;font-size:32px;width:80%;text-align:center;margin:0 auto;padding:0}.resetPasswordMainTitleEmoji{font-size:20px}.resetPasswordMainGif{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;margin:0 auto;padding:0;max-width:80%;max-height:300px}.resetPasswordMainSubTitle{width:80%;margin:16px auto;padding:0;font-size:24px;color:#938f60;font-weight:400;text-align:center}.resetPasswordMainRedirection{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;margin:0 auto;padding:0;text-decoration:none}.resetPasswordFooter{width:100%;margin:32px auto 0 auto;padding:32px 0;background-color:#4d7c8a}.resetPasswordFooterInfos{width:80%;margin:0 auto;font-size:18px;color:#fdfeff;text-align:center;font-style:italic;font-weight:100}.validateButton{padding:16px 32px;margin:0 auto;font-family:"Source Sans Pro","Trebuchet MS",sans-serif,"Times New Roman";background-color:#4d7c8a;border:none;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;font-size:22px;color:#fdfeff;cursor:pointer;text-decoration:none}.validateButton:hover{background-color:#3c464e}.w-100{width:100%;padding:16px 0}.wrapper{margin:0 auto}
+            @import"https://fonts.googleapis.com/css?family=Source+Sans+Pro";body{width:100%;height:100%}body,h1,h2,h3,h4,h5,h6,p,a{font-family:"Source Sans Pro","Trebuchet MS",sans-serif,"Times New Roman";color:#3c464e}body{width:100%;height:100%;margin:0 auto}.resetPassword{width:92%;max-width:800px;padding:0;overflow:hidden;margin:16px auto;background-color:#fdfeff;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;border:#3c464e 1px solid}.resetPasswordHeader{width:100%;padding:32px 0;margin:0 auto;background-color:#4d7c8a}.resetPasswordHeaderWelcome{width:100%;margin:0 auto 0 5px;padding:0;font-size:36px;font-weight:600;color:#fdfeff;text-align:center}.resetPasswordHeaderShareMania{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;width:100%}.resetPasswordHeaderShareManiaLogo{wwidth:49px;height:50px;padding:0;margin:0 5px 0 auto}.resetPasswordHeaderShareManiaText{margin:0 auto 0 5px;padding:0;font-size:48px;font-weight:600;color:#fdfeff}.resetPasswordHeaderSubTitle{width:80%;margin:16px auto;padding:0;font-size:20px;color:#fdfeff;font-weight:400;text-align:center}.resetPasswordMain{margin:0 auto;width:100%;padding:32px 0 0 0}.resetPasswordMainTitle{color:#4d7c8a;font-size:32px;width:80%;text-align:center;margin:0 auto;padding:0}.resetPasswordMainTitleEmoji{font-size:20px}.resetPasswordMainGif{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;margin:0 auto;padding:0;max-width:80%;max-height:300px}.resetPasswordMainSubTitle{width:80%;margin:16px auto;padding:0;font-size:24px;color:#938f60;font-weight:400;text-align:center}.resetPasswordMainRedirection{display:-webkit-box;display:-webkit-flex;display:-moz-box;display:-ms-flexbox;display:flex;margin:0 auto;padding:0;text-decoration:none}.resetPasswordFooter{width:100%;margin:32px auto 0 auto;padding:32px 0;background-color:#4d7c8a}.resetPasswordFooterInfos{width:80%;margin:0 auto;font-size:18px;color:#fdfeff;text-align:center;font-style:italic;font-weight:100}.validateButton{padding:16px 32px;margin:0 auto;font-family:"Source Sans Pro","Trebuchet MS",sans-serif,"Times New Roman";background-color:#4d7c8a;border:none;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;font-size:22px;color:#fdfeff;cursor:pointer;text-decoration:none}.validateButton:hover{background-color:#3c464e}.w-100{width:100%;padding:16px 0}.wrapper{margin:0 auto}
       
             </style>
       
           <!-- Title and description -->
-          <title>Bienvenue chez ShareMania !</title>
+          <title>Bienvenue chez ShareMania.fr !</title>
           <meta
-            name="Confirmation de création de compte - ShareMania"
-            content="Confirmation de création de compte - ShareMania"
+            name="Confirmation de création de compte - ShareMania.fr"
+            content="Confirmation de création de compte - ShareMania.fr"
           />
         </head>
         <!--     BODY     -->
@@ -37,7 +37,7 @@ module.exports = {
                   alt="ShareMania Logo"
                   class="resetPasswordHeaderShareManiaLogo"
                 />
-                <p class="resetPasswordHeaderShareManiaText">ShareMania</p>
+                <p class="resetPasswordHeaderShareManiaText">ShareMania.fr</p>
               </div>
               <p class="resetPasswordHeaderSubTitle">
                 Le plus brûlant des réseaux sociaux
@@ -74,7 +74,7 @@ module.exports = {
               </div>
               <div class="w-100">
                 <a href="${process.env.FRONT_END_HOST}/login" class="resetPasswordMainRedirection">
-                  <button class="validateButton">Retourner sur ShareMania</button>
+                  <button class="validateButton">Retourner sur ShareMania.fr</button>
                 </a>
               </div>
             </div>
